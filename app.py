@@ -14,7 +14,10 @@ class InputContent(BaseModel):
 def read_root():
     return {"Status": "Running..."}
 
-@app.post("/query")
+@app.get("/query")
 def query(input_content: InputContent):
-    output = retriever.query(input_content.query, k=10)
-    return output 
+    output = retriever.query(input_content.query, k=4)
+    return {
+        "results": output, 
+        "message": "OK"
+    }
