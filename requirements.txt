@@ -3,7 +3,7 @@ numpy
 matplotlib
 seaborn
 scikit-learn
-pytube
-youtube-transcript-api
 python-dotenv
-html2text
+nltk
+pickle
+pydantic
