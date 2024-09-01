@@ -4,8 +4,8 @@ from retriever import *
 
 app = FastAPI()
 
-retriever = Retriever(path_csv="./data/data_podcasts_title_content.csv", 
-                      path_model='./models/tfidf_model.pkl')
+retriever = Retriever(path_csv="./data/data_playlists_enem.csv", 
+                      path_model='./models/tfidf_model_enem.pkl')
 
 class InputContent(BaseModel):
     query: str

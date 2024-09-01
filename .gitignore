@@ -2,3 +2,5 @@ env/
 .dist/
 __pycache__/
 testing.ipynb
+rascunho/
+notebooks/
