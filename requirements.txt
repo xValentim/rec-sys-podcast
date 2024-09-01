@@ -7,5 +7,4 @@ python-dotenv
 fastapi
 uvicorn
 nltk
-pickle
 pydantic
