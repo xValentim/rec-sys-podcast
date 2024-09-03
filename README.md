@@ -67,7 +67,7 @@ Para realizar testes, você pode acompanhar o notebook `testes.ipynb` que conté
 Você pode mandar um ``get`` para o endpoint `/query` com a query acima para testar a API.
 
 ```bash
-curl -X GET "http://localhost:1414/query?query=Me%20explique%20sobre%20o%20tratado%20de%20versalhes."
+curl -X GET "http://10.103.0.28:1414/query?input_content=Me%20explique%20sobre%20o%20tratado%20de%20versalhes"
 ```
 
 #### 2. **Teste 2**: ``Query = Como é calculado o módulo de um vetor na física?`` 
@@ -77,7 +77,7 @@ curl -X GET "http://localhost:1414/query?query=Me%20explique%20sobre%20o%20trata
 Você pode mandar um ``get`` para o endpoint `/query` com a query acima para testar a API.
 
 ```bash
-curl -X GET "http://localhost:1414/query?query=Como%20é%20calculado%20o%20módulo%20de%20um%20vetor%20na%20física?"
+curl -X GET "http://10.103.0.28:1414/query?input_content=Como%20%C3%A9%20calculado%20o%20m%C3%B3dulo%20de%20um%20vetor%20na%20f%C3%ADsica%3F"
 ```
 
 #### 3. **Teste 3**: ``Query = nem toda proteína é uma enzima claro que existe a sessão existem raríssima as enzimas que não são proteínas``
@@ -87,7 +87,7 @@ curl -X GET "http://localhost:1414/query?query=Como%20é%20calculado%20o%20módu
 Você pode mandar um ``get`` para o endpoint `/query` com a query acima para testar a API.
 
 ```bash
-curl -X GET "http://localhost:1414/query?query=nem%20toda%20proteína%20é%20uma%20enzima%20claro%20que%20existe%20a%20sessão%20existem%20raríssima%20as%20enzimas%20que%20não%20são%20proteínas"
+curl -X GET "http://10.103.0.28:1414/query?input_content=nem%20toda%20prote%C3%ADna%20%C3%A9%20uma%20enzima%20claro%20que%20existe%20a%20sess%C3%A3o%20existem%20rar%C3%ADssima%20as%20enzimas%20que%20n%C3%A3o%20s%C3%A3o%20prote%C3%ADnas"
 ```
 
 Para mais detalhes sobre a execução dos testes, consulte o notebook `testes.ipynb`.
