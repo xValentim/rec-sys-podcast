@@ -60,24 +60,25 @@ A API possui os seguintes endpoints:
 
 Para realizar testes, você pode acompanhar o notebook `testes.ipynb` que contém exemplos de consultas à API. Lá também é testado a qualidade das recomendações feitas pela API. Foram elaborados 3 testes, cada um com uma query diferente:
 
-#### 1. **Teste 1**: ``Query = Me explique sobre o tratado de versalhes.``
-> Retorna 10 documentos relevantes (Acima de 0.05 de relevance)
+
+#### 1. **Teste 1**: ``Query = Como é calculado o módulo de um vetor na física?`` 
+> Retorna 10 documentos relevantes (Acima de 0.1 de relevance)
+> Um dos vídeos relevantes retornados (Com um trecho específico) ["Física | ENEM - Estática I - Ponto Material | CURSO GRATUITO COMPLETO | CURSO GRATUITO COMPLETO"](https://www.youtube.com/watch?v=yAUa4kazVoE)
+
+Você pode mandar um ``get`` para o endpoint `/query` com a query acima para testar a API.
+
+```bash
+curl -X GET "http://10.103.0.28:1414/query?input_content=Como%20%C3%A9%20calculado%20o%20m%C3%B3dulo%20de%20um%20vetor%20na%20f%C3%ADsica%20do%20movimento%20%28Mec%C3%A2nica%29"
+```
+
+#### 2. **Teste 2**: ``Query = Me explique sobre o tratado de versalhes.``
+> Retorna 6 documentos relevantes (Acima de 0.1 de relevance)
 > Um dos vídeos relevantes retornados (Com um trecho específico) ["HISTÓRIA GERAL #23 TRATADO DE VERSALHES"](https://www.youtube.com/watch?v=T-sajvY_F4Y)
 
 Você pode mandar um ``get`` para o endpoint `/query` com a query acima para testar a API.
 
 ```bash
 curl -X GET "http://10.103.0.28:1414/query?input_content=Me%20explique%20sobre%20o%20tratado%20de%20versalhes"
-```
-
-#### 2. **Teste 2**: ``Query = Como é calculado o módulo de um vetor na física?`` 
-> Retorna 8 documentos relevantes (Acima de 0.05 de relevance)
-> Um dos vídeos relevantes retornados (Com um trecho específico) ["Física | ENEM - Estática I - Ponto Material | CURSO GRATUITO COMPLETO | CURSO GRATUITO COMPLETO"](https://www.youtube.com/watch?v=yAUa4kazVoE)
-
-Você pode mandar um ``get`` para o endpoint `/query` com a query acima para testar a API.
-
-```bash
-curl -X GET "http://10.103.0.28:1414/query?input_content=Como%20%C3%A9%20calculado%20o%20m%C3%B3dulo%20de%20um%20vetor%20na%20f%C3%ADsica%3F"
 ```
 
 #### 3. **Teste 3**: ``Query = nem toda proteína é uma enzima claro que existe a sessão existem raríssima as enzimas que não são proteínas``
