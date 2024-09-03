@@ -7,18 +7,19 @@ app = FastAPI()
 retriever = Retriever(path_csv="./data/data_playlists_enem.csv", 
                       path_model='./models/tfidf_model_enem.pkl')
 
-class InputContent(BaseModel):
-    query: str
-
 @app.get("/")
 def read_root():
     return {"Status": "Running..."}
 
 @app.get("/query")
-def query(input_content: InputContent):
-    output = retriever.query(input_content.query, k=4)
+def query(input_content: str):
+    output = retriever.query(input_content, k=10)
+    output_filtro = []
+    for x in output:
+        if x.relevance > 0.05:
+            output_filtro.append(x)
     return {
-        "results": output, 
+        "results": output_filtro, 
         "message": "OK"
     }
 
