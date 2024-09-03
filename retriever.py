@@ -31,7 +31,8 @@ class Retriever:
             self.X = self.vectorizer.fit_transform(self.df['metadata_and_content_clean'])
         
     def invoke(self, query, k=3):
-        Q = self.vectorizer.transform([query])
+        query_processed = self.preprocess_text(query)
+        Q = self.vectorizer.transform([query_processed])
         R = self.X.dot(Q.T)
         
         # Get score with np.argsort
