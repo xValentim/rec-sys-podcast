@@ -16,7 +16,7 @@ def query(input_content: str):
     output = retriever.query(input_content, k=10)
     output_filtro = []
     for x in output:
-        if x.relevance > 0.05:
+        if x.relevance > 0.1:
             output_filtro.append(x)
     return {
         "results": output_filtro, 
