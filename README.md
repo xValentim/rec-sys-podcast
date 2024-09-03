@@ -61,7 +61,7 @@ A API possui os seguintes endpoints:
 Para realizar testes, você pode acompanhar o notebook `testes.ipynb` que contém exemplos de consultas à API. Lá também é testado a qualidade das recomendações feitas pela API. Foram elaborados 3 testes, cada um com uma query diferente:
 
 
-#### 1. **Teste 1**: ``Query = Como é calculado o módulo de um vetor na física?`` 
+#### 1. **Teste 1**: ``Query = Como é calculado o módulo de um vetor na física do movimento (mecânica)?`` 
 > Retorna 10 documentos relevantes (Acima de 0.1 de relevance)
 > Um dos vídeos relevantes retornados (Com um trecho específico) ["Física | ENEM - Estática I - Ponto Material | CURSO GRATUITO COMPLETO | CURSO GRATUITO COMPLETO"](https://www.youtube.com/watch?v=yAUa4kazVoE)
 
