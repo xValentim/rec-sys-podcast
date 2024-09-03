@@ -60,9 +60,35 @@ A API possui os seguintes endpoints:
 
 Para realizar testes, você pode acompanhar o notebook `testes.ipynb` que contém exemplos de consultas à API. Lá também é testado a qualidade das recomendações feitas pela API. Foram elaborados 3 testes, cada um com uma query diferente:
 
-1. **Teste 1**: Query sobre o vídeo ["PERÍODO JOANINO PARA O ENEM"](https://www.youtube.com/watch?v=F8c422R-C1w).
-2. **Teste 2**: Query sobre o vídeo ["HISTÓRIA GERAL #22 1ª GUERRA MUNDIAL"](https://www.youtube.com/watch?v=kCKuP2OqfEs).
-3. **Teste 3**: Query sobre o vídeo ["HISTÓRIA GERAL #23 TRATADO DE VERSALHES"](https://www.youtube.com/watch?v=T-sajvY_F4Y).
+#### 1. **Teste 1**: ``Query = Me explique sobre o tratado de versalhes.``
+> Retorna 10 documentos relevantes (Acima de 0.05 de relevance)
+> Um dos vídeos relevantes retornados (Com um trecho específico) ["HISTÓRIA GERAL #23 TRATADO DE VERSALHES"](https://www.youtube.com/watch?v=T-sajvY_F4Y)
+
+Você pode mandar um ``get`` para o endpoint `/query` com a query acima para testar a API.
+
+```bash
+curl -X GET "http://localhost:1414/query?query=Me%20explique%20sobre%20o%20tratado%20de%20versalhes."
+```
+
+#### 2. **Teste 2**: ``Query = Como é calculado o módulo de um vetor na física?`` 
+> Retorna 8 documentos relevantes (Acima de 0.05 de relevance)
+> Um dos vídeos relevantes retornados (Com um trecho específico) ["Física | ENEM - Estática I - Ponto Material | CURSO GRATUITO COMPLETO | CURSO GRATUITO COMPLETO"](https://www.youtube.com/watch?v=yAUa4kazVoE)
+
+Você pode mandar um ``get`` para o endpoint `/query` com a query acima para testar a API.
+
+```bash
+curl -X GET "http://localhost:1414/query?query=Como%20é%20calculado%20o%20módulo%20de%20um%20vetor%20na%20física?"
+```
+
+#### 3. **Teste 3**: ``Query = nem toda proteína é uma enzima claro que existe a sessão existem raríssima as enzimas que não são proteínas``
+> Essa query é não trivial pois é um trecho específico de um vídeo, não é uma pergunta direta. Ele retornou o trecho exato de onde foi tirado.
+> Um dos vídeos relevantes retornados (Com um trecho específico) ["PROTEÍNAS - COMPOSTOS ORGÂNICOS - BIOQUÍMICA | Biologia com Samuel Cunha"](https://www.youtube.com/watch?v=ryW0698xdyY)
+
+Você pode mandar um ``get`` para o endpoint `/query` com a query acima para testar a API.
+
+```bash
+curl -X GET "http://localhost:1414/query?query=nem%20toda%20proteína%20é%20uma%20enzima%20claro%20que%20existe%20a%20sessão%20existem%20raríssima%20as%20enzimas%20que%20não%20são%20proteínas"
+```
 
 Para mais detalhes sobre a execução dos testes, consulte o notebook `testes.ipynb`.
 
